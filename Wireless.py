@@ -81,16 +81,16 @@ allowed_usernames = {
 # Define your questions
 wireless= {
     "true_false": [
-        {"statement": "In 2G Base station is connected to RNC", "answer": "F"},
-        {"statement": "4G has no BSC/RNC", "answer": "T"},
-        {"statement": "RRU5909 consists of 4*60 Watt", "answer": "F"},
-        {"statement": "In 3G Base station is connected to RNC", "answer": "T"},
-        {"statement": "4T6S stands for 4T4R (MIMO) with 6-Sectors", "answer": "T"},
-        {"statement": "DBS3900 system consists of BBU, RRU and Antennas", "answer": "T"},
-        {"statement": "BBU3900 is 10 inches wide and 1 U high", "answer": "F"},
-        {"statement": "RRU Installation Auxiliary Fiber, Power cables SFP", "answer": "T"},
-        {"statement": "In 2G Base station is connected to BSC", "answer": "T"},
-        {"statement": "The RRUs can be installed on the pole, on the wall and in the L-Rack and so on", "answer": "T"}
+        {"question": "In 2G Base station is connected to RNC", "answer": "F"},
+        {"question": "4G has no BSC/RNC", "answer": "T"},
+        {"question": "RRU5909 consists of 4*60 Watt", "answer": "F"},
+        {"question": "In 3G Base station is connected to RNC", "answer": "T"},
+        {"question": "4T6S stands for 4T4R (MIMO) with 6-Sectors", "answer": "T"},
+        {"question": "DBS3900 system consists of BBU, RRU and Antennas", "answer": "T"},
+        {"question": "BBU3900 is 10 inches wide and 1 U high", "answer": "F"},
+        {"question": "RRU Installation Auxiliary Fiber, Power cables SFP", "answer": "T"},
+        {"question": "In 2G Base station is connected to BSC", "answer": "T"},
+        {"question": "The RRUs can be installed on the pole, on the wall and in the L-Rack and so on", "answer": "T"}
         
     ],
     "single_choice": [
