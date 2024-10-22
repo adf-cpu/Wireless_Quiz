@@ -33,9 +33,9 @@ with col1:  # Left column
     st.image("Huawei.jpg", width=80)
 
 cloudinary.config(
-    cloud_name="drpkmvcdb",  # Replace with your Cloudinary cloud name
-    api_key="421723639371647",        # Replace with your Cloudinary API key
-    api_secret="AWpJzomMBrw-5DHNqujft5scUbM"   # Replace with your Cloudinary API secret
+    cloud_name="dbohldkhc",  # Replace with your Cloudinary cloud name
+    api_key="564337941385471",        # Replace with your Cloudinary API key
+    api_secret="l8WmpUAncn2t1xY67HWct6B9ZKc"   # Replace with your Cloudinary API secret
 )
 
 def upload_to_cloudinary(file_path, public_id):
