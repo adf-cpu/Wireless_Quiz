@@ -15,7 +15,17 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
+# Hide the avatar image
+st.markdown(
+    """
+    <style>
+    ._profileImage_1yi6l_74 {
+        display: none;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 # Use Streamlit's image function to show the image on the left side
 col1, col2 = st.columns([1, 3])  # Create 2 columns with ratios (left narrower than right)
 
