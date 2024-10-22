@@ -301,7 +301,7 @@ else:
                         
                         if question_detail["type"] == "true_false":
                             
-                            score = 4.3
+                            score = 4.286
                             if user_answer == question_detail["answer"]:
                                 correct_answers += 1
                                 total_score += score
@@ -310,7 +310,7 @@ else:
                                 wrong_answers += 1
                                 result_details.append((question_detail["question"], user_answer, question_detail["answer"], "Wrong"))
                         elif question_detail["type"] == "single_choice":
-                            score = 3.8
+                            score = 3.75
                             if sorted(user_answer) == sorted(question_detail["answer"]):
                                 correct_answers += 1
                                 total_score += score
