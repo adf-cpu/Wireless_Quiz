@@ -79,24 +79,122 @@ allowed_usernames = {
     
 }
 # Define your questions
-power = {
+wireless= {
     "true_false": [
+        {"statement": "In 2G Base station is connected to RNC", "answer": "F"},
+        {"statement": "4G has no BSC/RNC", "answer": "T"},
+        {"statement": "RRU5909 consists of 4*60 Watt", "answer": "F"},
+        {"statement": "In 3G Base station is connected to RNC", "answer": "T"},
+        {"statement": "4T6S stands for 4T4R (MIMO) with 6-Sectors", "answer": "T"},
+        {"statement": "DBS3900 system consists of BBU, RRU and Antennas", "answer": "T"},
+        {"statement": "BBU3900 is 10 inches wide and 1 U high", "answer": "F"},
+        {"statement": "RRU Installation Auxiliary Fiber, Power cables SFP", "answer": "T"},
+        {"statement": "In 2G Base station is connected to BSC", "answer": "T"},
+        {"statement": "The RRUs can be installed on the pole, on the wall and in the L-Rack and so on", "answer": "T"}
         
     ],
-    "choose_correct": [
+    "single_choice": [
+            {
+        "question": "How many types of BBU Used in Wireless?",
+        "options": ["A) 4", "B) 2", "C) 1", "D) 3"],
+        "answer": "D) 3"
+    },
+    {
+        "question": "RRU Stands for",
+        "options": ["A) Radio frequency unit", "B) Radio Resource Unit", "C) Remote Radio Unit", "D) Radio Frequency Unit"],
+        "answer": "C) Remote Radio Unit"
+    },
+    {
+        "question": "In MM Which BBU model used.",
+        "options": ["A) BBU5900", "B) BBU3910", "C) BBU3900"],
+        "answer": "A) BBU5900"
+    },
+    {
+        "question": "In which slot UPEU Board can be install.",
+        "options": ["A) Slot 1", "B) Slot 16", "C) Slot 19", "D) Slot 2"],
+        "answer": "C) Slot 19"
+    },
+    {
+        "question": "In which slot UMPT Board can be install.",
+        "options": ["A) Slot 1", "B) Slot 7", "C) Slot 5", "D) Slot 2"],
+        "answer": "B) Slot 7"
+    },
+    {
+        "question": "BBU3900 is 19 inches wide and x U high.",
+        "options": ["A) 1", "B) 7", "C) 4", "D) 2"],
+        "answer": "D) 2"
+    },
+    {
+        "question": "BBU3900 is 19 inches wide and x U high.",
+        "options": ["A) 1", "B) 7", "C) 4", "D) 2"],
+        "answer": "D) 2"
+    },
+    {
+        "question": "BBU3900 is 19 inches wide and x U high.",
+        "options": ["A) 1", "B) 7", "C) 4", "D) 2"],
+        "answer": "D) 2"
+    },
+    {
+        "question": "RRU5909 Consist of",
+        "options": ["A) 2*60", "B) 2*70", "C) 2*40", "D) 2*50"],
+        "answer": "A) 2*60"
+    },
+    {
+        "question": "RRU5904 is 19 inches wide and x U high.",
+        "options": ["A) 2*60", "B) 4*60", "C) 2*40", "D) 2*50"],
+        "answer": "B) 4*60"
+    }
         
-         
         
     ],
     "multiple_choice": [
-       
+        {
+        "question": "Antenna Types include",
+        "options": ["A) Single band", "B) Dual Band", "C) Tri-Band", "D) Quad band", "E) Penta band"],
+        "answer": ["A) Single band", "B) Dual Band", "C) Tri-Band", "D) Quad band", "E) Penta band"]
+    },
+    {
+        "question": "UBBP Board can be installed in BBU at",
+        "options": ["A) Slot 7", "B) Slot 1", "C) Slot 4", "D) Slot 3", "E) Slot 5", "F) Slot 2"],
+        "answer": ["B) Slot 1", "C) Slot 4", "D) Slot 3", "E) Slot 5", "F) Slot 2"]
+    },
+    {
+        "question": "UPEU Board can be installed in BBU at",
+        "options": ["A) Slot 18", "B) Slot 1", "C) Slot 4", "D) Slot 19", "E) Slot 5", "F) Slot 2"],
+        "answer": ["A) Slot 18", "D) Slot 19"]
+    },
+    {
+        "question": "DBS3900/5900 system consists of",
+        "options": ["A) BBU", "B) RRU", "C) Antenna", "D) RCU (Optional)"],
+        "answer": ["A) BBU", "B) RRU", "C) Antenna", "D) RCU (Optional)"]
+    },
+    {
+        "question": "HUAWEI Main Base Station",
+        "options": ["A) Indoor eNodeB BTS3900", "B) Outdoor eNodeB BTS3900", "C) Distributed eNodeB DBS3900"],
+        "answer": ["A) Indoor eNodeB BTS3900", "B) Outdoor eNodeB BTS3900", "C) Distributed eNodeB DBS3900"]
+    },
+    {
+        "question": "What are UBBP boards types",
+        "options": ["A) UBBPd5", "B) UBBPe2", "C) UBBPg", "D) UBBPj"],
+        "answer": ["A) UBBPd5", "B) UBBPe2", "C) UBBPg", "D) UBBPj"]
+    },
+    {
+        "question": "Below are BBU Boards",
+        "options": ["A) RRU", "B) UBBP", "C) UPEU", "D) UMPT"],
+        "answer": ["B) UBBP", "C) UPEU", "D) UMPT"]
+    },
+    {
+        "question": "BBU Installation scenarios",
+        "options": ["A) Indoor", "B) Outdoor", "C) Indoor on the wall"],
+        "answer": ["A) Indoor", "B) Outdoor", "C) Indoor on the wall"]
+    }
     ]
 }
 # Flatten questions for navigation
 if not st.session_state.flattened_questions:
     flattened_questions = []
 
-    for category, qs in power.items():
+    for category, qs in wireless.items():
         for q in qs:
             q['type'] = category  # Set the type for each question
             flattened_questions.append(q)
@@ -105,18 +203,18 @@ if not st.session_state.flattened_questions:
     random.shuffle(flattened_questions)
 
     true_false_questions = [q for q in flattened_questions if q['type'] == 'true_false']
-    choose_correct_questions = [q for q in flattened_questions if q['type'] == 'choose_correct']
+    single_choice_questions = [q for q in flattened_questions if q['type'] == 'single_choice']
     mcq_questions = [q for q in flattened_questions if q['type'] == 'multiple_choice']
 
     # Combine the questions in the desired order
     all_questions = (
-    true_false_questions[:15] + 
-    choose_correct_questions[:10] + 
-    mcq_questions[:15]
+    true_false_questions[:7] + 
+    single_choice_questions[:8] + 
+    mcq_questions[:5]
 )
 
-    # Limit to the first 40 questions
-    st.session_state.flattened_questions = all_questions[:40]
+    # Limit to the first 20 questions
+    st.session_state.flattened_questions = all_questions[:20]
 
 # Initialize answers
 if len(st.session_state.answers) != len(st.session_state.flattened_questions):
@@ -186,7 +284,7 @@ else:
                         
                         if question_detail["type"] == "true_false":
                             
-                            score = 2
+                            score = 4.3
                             if user_answer == question_detail["answer"]:
                                 correct_answers += 1
                                 total_score += score
@@ -194,8 +292,8 @@ else:
                             else:
                                 wrong_answers += 1
                                 result_details.append((question_detail["question"], user_answer, question_detail["answer"], "Wrong"))
-                        elif question_detail["type"] == "choose_correct":
-                            score = 4
+                        elif question_detail["type"] == "single_choice":
+                            score = 3.8
                             if sorted(user_answer) == sorted(question_detail["answer"]):
                                 correct_answers += 1
                                 total_score += score
@@ -204,7 +302,7 @@ else:
                                 wrong_answers += 1
                                 result_details.append((question_detail["question"], user_answer, question_detail["answer"], "Wrong"))
                         elif question_detail["type"] == "multiple_choice":
-                            score = 2
+                            score = 8
                             if user_answer == question_detail["answer"]:
                                 correct_answers += 1
                                 total_score += score
@@ -257,7 +355,7 @@ else:
     # Display current question if quiz is not submitted
     if not st.session_state.quiz_submitted and st.session_state.current_question < len(st.session_state.flattened_questions):
         current_question = st.session_state.flattened_questions[st.session_state.current_question]
-        total_questions = 40
+        total_questions = 20
         question_number = st.session_state.current_question + 1 
         progress_percentage = question_number / total_questions
         st.write(f"**Question {question_number} of {total_questions}**")  # Question count
@@ -268,15 +366,15 @@ else:
         # Display options based on question type
         if current_question["type"] == "multiple_choice":
             st.header('Multiple Choice Questions')
-            st.session_state.answers[st.session_state.current_question] =  st.radio("Choose an option:", current_question["options"], key=f"mc_{st.session_state.current_question}")
+            st.session_state.answers[st.session_state.current_question] =  st.multiselect("Choose Multiple Choice option:", current_question["options"], key=f"mc_{st.session_state.current_question}")
         elif current_question["type"] == "true_false":
             st.header('True False')
          
-            st.session_state.answers[st.session_state.current_question] =st.radio("Choose an option:", ["True", "False"], key=f"tf_{st.session_state.current_question}")
-        elif current_question["type"] == "choose_correct":
-            st.header('Choose The Correct')
+            st.session_state.answers[st.session_state.current_question] =st.radio("Choose an  option:", ["True", "False"], key=f"tf_{st.session_state.current_question}")
+        elif current_question["type"] == "single_choice":
+            st.header('Single Choice Questions')
            
-            st.session_state.answers[st.session_state.current_question] =st.multiselect("Choose correct options:", current_question["options"], key=f"cc_{st.session_state.current_question}")
+            st.session_state.answers[st.session_state.current_question] =st.radio("Choose Single Choice options:", current_question["options"], key=f"cc_{st.session_state.current_question}")
 
 # Add a footer
 st.markdown("<footer style='text-align: center; margin-top: 20px;'>© 2024 Huawei Training Portal. All Rights Reserved.</footer>", unsafe_allow_html=True)
