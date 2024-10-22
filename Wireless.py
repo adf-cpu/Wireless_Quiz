@@ -5,27 +5,28 @@ import random
 import cloudinary
 import cloudinary.uploader
 import os
-# st.markdown(
-#     """
-#     <style>
-#     .st-emotion-cache-1huvf7z {
-#         display: none; /* Hides the button */
-#     }
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
-# # Hide the avatar image
-# st.markdown(
-#     """
-#     <style>
-#     ._profileImage_1yi6l_74 {
-#         display: none;
-#     }
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
+st.markdown(
+    """
+    <style>
+    .st-emotion-cache-1huvf7z {
+        display: none; /* Hides the button */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+# Hide the avatar image
+st.markdown(
+    """
+    <style>
+    ._profileImage_1yi6l_74 {
+        display: none;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Use Streamlit's image function to show the image on the left side
 col1, col2 = st.columns([1, 3])  # Create 2 columns with ratios (left narrower than right)
 
@@ -65,6 +66,11 @@ def save_results(username, total_attempted, correct_answers, wrong_answers, tota
                             columns=["Username", "Date", "Total Attempted", "Correct Answers", "Wrong Answers", "Total Score", "Time Taken", "Details"])
     df = pd.concat([df, new_data], ignore_index=True)
     df.to_excel("quiz_results_wireless.xlsx", index=False)
+       # Upload the file to Cloudinary
+    uploaded_url = upload_to_cloudinary("quiz_results_wireless.xlsx", "quiz_results_wireless")
+    if uploaded_url:
+        st.success(f"Quiz results uploaded successfully!")
+        # st.markdown(f"Access your file here: [quiz_results.xlsx]({uploaded_url})")
 
 # Initialize session state
 if 'logged_in' not in st.session_state:
